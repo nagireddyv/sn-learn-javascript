@@ -3,7 +3,7 @@
 //
 var firstName = 'Chuck';
 var loginName = 'chuck';
-if (loginName == firstName) {
+if (loginName.toUpperCase() == firstName.toUpperCase()) {
   gs.info('names match');
 } else {
   gs.info('names do not match');

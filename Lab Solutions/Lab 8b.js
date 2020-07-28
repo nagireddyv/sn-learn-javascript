@@ -9,9 +9,26 @@
  
     var queryParams = request.queryParams; 
     var tableName   = queryParams.tableName;
-    var limit.      = queryParams.limit;
+    var limit      = queryParams.limit;
 
     var list = new SNJS().getRecords(tableName, limit);
+        
+    response.setBody(list);
+    
+})(request, response);
+
+
+
+
+//lab 8b
+
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+ 
+    var queryParams = request.queryParams; 
+    var tableName   = queryParams.tableName;
+    var limit      = queryParams.limit;
+
+    var list = new RecordLookup().getRecords(tableName, limit);
         
     response.setBody(list);
     
